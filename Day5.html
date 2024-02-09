@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arry Iteration</title>
+  </head>
+  <body>
+    <script>
+      // Array Iteration method itretion means itrate one by one array elements
+      // 1.forEach():-it itration by one by in array elements
+      //    let arr1=[];
+      //    let sum=0;
+      //    let arr=[1,2,3,4,8,9,6];
+      //    arr.forEach((x,i,arr)=>{
+      //         if(x%2==0){
+      //             sum+=x;
+      //             arr1.push(x)
+      //         }
+      //    })
+      //    console.log(arr1);
+      //    console.log("total sum of even number = " ,sum);
+      //console.log(arr); NOt chane in orignal array
+
+      //   let arr=[];
+      //         let num = [1,2,3,4,5,6,7,8,9];
+      //         let print = num.forEach((x)=>{
+      //             if(x>3){
+      //                 arr.push(x)
+      //             }
+      //         })
+      //         console.log(arr);
+
+      // 2. MaP method():- used to perfome the aritmatic operation and not any change the orignal array.
+      // - map() does not change the original array.
+      // - map() executes callback once for each array element in order.
+      // - map() does not execute callback for array elements without values.
+
+      //   let arr=[2, 4, 6, 8, 10];
+      //   console.log(arr.map((x)=>x*x));
+      //   console.log(arr);
+
+      // let num=[10,20,30,40,50,60];
+      // let res = num.map((x)=>x*10);
+      // console.log(res);
+      // console.log(num);
+
+      // 3.filter:- method creates a new array with array elements that pass a test.
+      //   var playersArr = [
+      //     { name: "Jason", footedness: "left", position: "forward" },
+      //     { name: "Blake", footedness: "right", position: "defense" },
+      //     { name: "Philip", footedness: "right", position: "goalie" },
+      //     { name: "Logan", footedness: "left", position: "defense" },
+      //     { name: "Will", footedness: "right", position: "forward" },
+      //   ];
+      //   console.log(playersArr[2].position);
+      //   let leftfootarr = playersArr.filter((x)=>{
+      //         return x.name === "Jason";
+      //    })
+      // console.log(leftfootarr);
+
+      // let num=[1,2,3,8,9,42];
+      // let add = num.filter((x)=>{
+      //     if(x%2==0){
+      //       return x;
+      //     }
+      // })
+      // console.log(add);
+
+      // let num =[10,20,30,40,50];
+      //     let res= num.filter((x)=>x>30);
+      //     console.log(res);
+      //     console.log(num);
+
+      // 4.Reduce:- runs a function on each array element to produce (reduce it to) a single value.
+      // it work on left to right
+      // let number =[1,2,3,4,5,6,8,6,1,55];
+      // let reducer= number.reduce( (acc,curval)=> acc+curval)
+      // console.log(reducer);
+
+      // let number =[1,2,3,4,5,6,8,6,1,55,85];
+      // let res = number.reduce( function(accu,curval){
+      //     return accu + curval
+      // },0)
+      // console.log(res);
+
+      //     const shoppingCart = [
+      //     {
+      //         itemName: "js course",
+      //         price: 2999
+      //     },
+      //     {
+      //         itemName: "py course",
+      //         price: 999
+      //     },
+      //     {
+      //         itemName: "mobile dev course",
+      //         price: 5999
+      //     },
+      //     {
+      //         itemName: "data science course",
+      //         price: 12999
+      //     },
+      // ]
+
+      // const array =['h','e','l','l','o'];
+      // let reducer= array.reduce((accu ,curval)=>{
+      //    return accu +curval;
+      // })
+      // console.log(reducer);
+
+      // const num =[175,25,50];
+      // let print = num.reduce((item,curval)=>{
+      //     return item-curval;
+      // })
+      // console.log(print);//100
+
+      //5. Reducerigth():-The reduceRight() method runs a function on each array element to produce (reduce it to) a single value.
+      //The reduceRight() works from right-to-left in the array.
+
+      // const num1 =[175,25,50];
+      // let print1 = num.reduceRight((item,curval)=>{
+      //     return item-curval;
+      // })
+      // console.log(print1); //-150
+
+      //6. FlateMap():- all elements of an array and then creates a new array by flattening the array.
+
+      //    let num = [1,2,3];
+      //    let str = ['one','two','three'];
+      //    let mapped = num.flatMap((x,index)=>[x ,str[index]]);
+      //    console.log(mapped);
+
+      //7. every():-The every() method checks if all array values pass a test. the all values conditon is true that time returns a boolean value true of false check all the value one bt one in array elemet that any one value is not match the condtion is return false.
+      // let num=[30,45,17,22,26];
+      // let res = num.every((x)=>{
+      //     return x > 18;
+      // })
+      // console.log(res); False
+
+      //8. The some() :- method checks if some array values pass a test.pass a test that any one value is match the conditon it returns true
+      // let num=[3,45,1,2,2];
+      //     let res = num.some((x)=>{
+      //         return x > 18;
+      //     })
+      // console.log(res);true
+
+      // 9.keys():- method returns an Array Iterator object with the keys of an array.
+      // let arr=[1,2,3,4,5];
+      // let res= arr.keys()
+      // for(let x of res){
+      //     console.log(x);
+      // }
+
+      //10.entries():- method returns an Array Iterator object with key/value pairs:
+      // let arr=["one","yes","two","no"];
+      // let res=arr.entries();
+      // for(let x of res){
+      //     console.log(x);
+      // }
+
+      // 11.Spread[...] it used to combined the array or object
+      // let arr1=["one","two","three"];
+      // let arr2=["four","five","six"];
+      // let arr3=["seven","eigth","nine"];
+      // console.log([...arr1,...arr2,...arr3]);
+
+
+      // Array Const
+          // The keyword const is a little misleading.
+          // It does NOT define a constant array. It defines a constant reference to an array.
+          //You can change the elements of a constant array:
+          // const arr=["audi","bmw","toyoto"];
+          // arr[0]='Maruti'
+          // console.log(arr);
+
+      //Date Functions/Objects
+      
+        // let date = new Date();
+        // let olddate = new Date(1998,1,15)
+        // let dob = date.getFullYear() - olddate.getFullYear();
+        // console.log(dob);
+
+      // let x = 10;
+      // let y = 20;
+      // let text = x + y;
+      // let result = eval(text);
+      // console.log(result);
+
+
+      // Date Get Methods
+      // let x = new Date();
+      // console.log(x);
+      // let year  = x.getFullYear();//yera
+      // let month = x.getMonth()+1; //Month
+      // let day   = x.getDay();//Week
+      // let date  = x.getDate();//date
+      // let hours = x.getHours();//time in hours
+      // let sec   = x.getSeconds();//time in seconds
+      // let time  = x.getTime();//show the time in January 1, 1970  time
+      // console.log(time);
+
+      // Date Set Methods
+      // let date = new Date();
+      // date.setDate(15)
+      // date.setFullYear(2025)
+      // date.setHours(16)
+      // date.setMinutes(50)
+      // date.setMilliseconds(59)
+      // date.setMonth(2)
+      // date.setSeconds(50)
+      // console.log(date);
+      
+
+      // Show the 50 days future Date 
+      
+        // let date = new Date();
+        // date.setDate(date.getDate()+50);
+        // console.log(date);
+
+      //Compare current date to future date
+      //  let date=new Date();
+      //  let olddate=new Date(2023,1,15);
+
+      //  if(olddate>date){
+      //   console.log('past date');
+      //  }
+      //  else{
+      //   console.log('current date');
+      //  }
+
+
+
+    // Math Objects
+    // let x=123.99;
+    // console.log(Math.floor(x));//Math.floor method is convert the lower point.
+    // console.log(Math.ceil(x));//Math .ceil method is convert the upper point.
+    // console.log(Math.round(x));//Math.round method .remove the point value.
+    // console.log(Math.trunc(x));//Math.trunc remove the point value.
+    // console.log(Math.sqrt(x));//Math.aqrt it find the square root.
+    // console.log(Math.pow(3,4));//Math.pow find the pow value.
+    // console.log(Math.max(1,5,9,78,5,9,66,));//Math.Max Find the Maximum Number
+    // console.log(Math.min(55,69,3,8,45,879,0,-1));//Math.min Find the Minimum Number
+
+    
+    
+    // Math  Random
+    // let random =Math.random()//Genrate the Random Number
+    // let a = Math.trunc(Math.random()*10);// print 0 to 9
+    // let b = Math.trunc(Math.random()*100);//print 0 to 99
+    // display number 1 to 10
+    // let p = Math.trunc(Math.random()*10)+1
+    // console.log(p);
+    // function RandomNumber(){
+    //   return Math.trunc(Math.random()*(15-10)+10)
+    // }RandomNumber();
+
+      // function 
+      // function getRndInteger(min, max) {
+      // return Math.floor(Math.random() * (max - min) ) + min;
+      // }
+      
+      // let number=Math.trunc(Math.random()*(25-15))+15;
+      // console.log(number);  
+
+      // pritn 50 to 100 Number
+
+      // function number(){
+      //   return Math.trunc(Math.random()*(100-50))+50;
+      // }
+      // let res = number();
+      // console.log(res);
+
+      
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
