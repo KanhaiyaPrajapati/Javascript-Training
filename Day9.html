@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day 9</title>
+  </head>
+  <body>
+    <script>
+      // Use strict
+      // function add(a,b){
+      //     let sum = a+b
+      //     console.log(sum);
+      // }
+      // let res = add(10,20)
+      // console.log(res);
+
+      // This Keyword
+
+      // let person = {
+      //     firstname:'krishna',
+      //     lastname:'prajapati',
+      //     sayhello () {
+      //         console.log(this.firstname + ' ' + this.lastname);
+      //     }
+      // }
+      // person.sayhello();
+
+      // let person ={
+      //     firstname:'krishna',
+      //     lastname:'prajapati',
+      //     age:20,
+      //     hello : function(){
+      //       console.log(this.firstname + ' ' + this.lastname + ' ' + ' ' + this.age )  ;
+      //     }
+      // }
+      // person.hello()
+
+      // let person = {
+      //     fname:'rahul',
+      //     lname:'khatik',
+      //     sayhello () {
+      //         console.log('Hello My Name is '+ this.fname + ' ' + this.lname + ' i have a ' + car.brand + ' Car' + 'My car Model is ' + car.model  + '.');
+      //     }
+      // } ;
+
+      // let car ={
+      //     brand:'tata',
+      //     model :2020,
+      // };
+      // person.sayhello();
+
+      // Arrow Function in details
+
+      // function add (a,b){
+      //     return a+b;
+      // }
+      // console.log(add(10,20 + ' Traditional func '));
+
+      // let  addA = (a,b) => a+b;
+
+      // console.log(addA(10,20 + ' arrow '));
+
+      // function add(a){
+      //         return a*2;
+      //     }
+      // console.log(add(10));
+
+      // let  add = a => a*2;
+      // console.log(add(100));
+
+      // document.addEventListener('click',function(){
+      //     console.log('hello friends');
+      // })
+
+      // document.addEventListener('click', () =>{
+      //     console.log(('hello friends'));
+      // })
+
+      // function print(){
+      //     console.log('hello krishna');
+      // }
+      // console.log(print());
+
+      // let print1 = () =>
+      // {
+
+      //     console.log('hello krishna');
+      // }
+      // print1();
+
+      // function multi(a){
+      //     for(let i=1;i<=10;i++){
+      //         console.log(`${a}x${i}=${a*i}`);
+      //     }
+      // }
+      // multi(10)
+
+      // let multi1 = (b) =>{
+      //     for(let i=1;i<=10;i++){
+      //         document.write(`${b}x${i} = ${b*i} <br>`);
+      //     }
+      // }
+      // multi1(12)
+
+      //  let print =  prompt('Enter the Number:');
+      //  let multi = () =>{
+      //     for(let i=1;i<=10;i++){
+      //         document.write(`${print}x${i} = ${print * i} <br>`);
+      //     }
+      //  }
+      //  multi()
+
+      //============================= Object Constructor function ==================================
+
+      // function person(fname,lname,age,mo,city,nat){
+      //    this.firstname=fname;
+      //    this.lastname=lname;
+      //    this.age=age;
+      //    this.mobile=mo;
+      //    this.city=city;
+
+      // }
+      // let person1 = new person ('Krishna','prajapati',25,8849931533,'surat');
+      // let person2 = new person ('Shyam','Borse',20,12849931533,'surat');
+      // let person3 = new person ('Rahul','Kahatik',35,7989931533,'surat');
+
+      // person.prototype.nationality='indian';
+
+      // console.log(person1)
+      // console.log(person2)
+      // console.log(person3)
+
+      // person1.print =function(){
+      //     console.log('hello krishna');
+      // }
+      // person1.print();
+
+      // Default perameter
+
+      // function talk(msg = 'Hii'){
+      //    console.log(msg);
+      // }
+      // talk('krishna');
+
+      // rest Parameter (...)
+      // let sum=0;
+      // function add(...args){
+      //       for(let x of args){
+      //         sum+=x;
+      //       }
+      //     }
+      // add(10,20,30,40,50,60,70,80,90,100);
+      // console.log(sum);
+
+      // Classes in javascript Inheritance,Constructor,Extends.
+
+      //     class person{
+      //         constructor(a,b,c){
+      //             this.fname=a;
+      //             this.lname=b;
+      //             this.age=c;
+      //         }
+
+      //         sayhello() {    //Prototype methods
+      //               console.log('hello krishna');
+      //         }
+
+      //         static hi (){   //static method
+      //             console.log('hiiii');
+      //         }
+      //     }
+      //    let person1 = new person ('krishna','prajapati',25);
+      //    person1.sayhello();
+      //    console.log(person1);
+      //    console.log(person.hi());
+
+      // class emp{
+      //     constructor(n){
+      //        this.fname = n;
+      //     }
+      // }
+      // class manager extends emp{
+      //     constructor(p,d){
+      //         super(p);
+      //         this.dapartment = d;
+      //     }
+      // }
+      // let mng1 = new manager('krishna','Web Devlopment');
+      // console.log(mng1);
+
+      //  class owner{
+      //     constructor(e1,e2,e3,e4,e5){
+      //         this.emp1Name=e1;
+      //         this.emp2Name=e2;
+      //         this.emp3Name=e3;
+      //         this.emp4Name=e4;
+      //         this.emp5Name=e5;
+      //     }
+      //  };
+
+      //  class clients extends owner{
+      //     constructor(a,b,c,d,f,s){
+      //         super(a,b,c,d,f,s)
+      //         this.salary = s;
+      //     }
+      //  }
+
+      // let employee1 = new clients('krishna','ram','shyam','geeta','sita','50k');
+      // console.log(employee1);
+      // console.log(clients.e1);
+
+
+    //   class car{
+    //     constructor(name,year){
+    //         this.name=name;
+    //         this.year=year;
+    //     }   
+    //     hellocar(){
+    //         console.log('My car Name is ' + this.name + ' My Car Model is ' + this.year);
+    //     }
+    //   };
+    //   let mycar = new car('Swift Dzire',2023);
+    //   console.log(mycar);
+    //   console.log(mycar.hellocar());
+
+
+    // class and object and Inheritance
+
+     class parent{
+        constructor(name,age,salary){
+            this.name=name;
+            this.age=age;
+            this.salary=salary;
+        }
+        devloper(){
+            console.log('hii devloper');
+        }
+        static coder(){
+            console.log('hi Coder');
+        }
+        
+     }
+     class child extends parent{
+        constructor(a,b,c,dept){
+            super(a,b,c,dept);
+            this.departments=dept;
+        }
+     }
+     let child1 = new child('Ram' , 25, '30k','Web Devlopment');
+     let child2 = new child('rahul',30,'15k','App Devlopment')
+     let child3 = new child('Manish',35,'25k','Flutter Devlopment')
+     console.log(child1);
+     console.log(child2);
+     console.log(child3);
+     console.log(child1.devloper());
+     console.log(child.coder());
+
+
+
+    </script>
+  </body>
+</html>
