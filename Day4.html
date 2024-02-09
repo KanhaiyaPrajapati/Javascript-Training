@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array and its Methods</title>
+  </head>
+  <body>
+    <script>
+      // Array Methods
+
+      // 1.slice():-this methos is copy the element and return the new array not afffect in old array
+      // const arr=[10,20,30,40,50,60];
+      // console.log(arr);
+      // const arr2=arr.slice(1)//single parameter
+      // console.log(arr2);//20,30,40,50,60
+
+      // const arr=[10,20,30,40,50,60,70,80,90,100];
+      // console.log(arr);
+      // const arr2=arr.slice(2,8)//second parameter is index/length-1(up to) and start with zero
+      //  console.log(arr2);//30,40,50,60,70,80
+      // console.log(arr);
+
+      // 2.Splice():-this method is Cut the array and returns the new array existing the cut array elements
+      // second parameter start with 1 and when first parameter is reached start with there.
+      // const arr=[10,20,30,40,50,60,70,80,90,100];
+      // console.log(arr);
+      // const arr2 = arr.splice(3,6)//[40,50,60,70,80,90]
+      // console.log(arr2);
+      // console.log(arr);//old array affected [10,60]
+
+
+      // add text  middle in  the array
+      //     let arr=[1,2,4,5,6];
+      //     let indextoAdd = Math.floor(arr.length/2);
+      //     let elementadd = 103;
+      //     arr.splice(indextoAdd,0,elementadd)
+      //     console.log(arr);//1,2,3,4,5,6
+
+      // 3.Join():-it convert array into the string
+      // const heroes=["spiderman","batman","superman"];
+      // const res=heroes.join(",");
+      // console.log(res);
+
+      // 4.isArray():-check the array or not returns boolan value
+      // const arr=[10,20,30];
+      // const str='10,20,30';
+      // console.log(Array.isArray(arr));
+
+      // 5.Length():-check the length of  the array.
+      // const arr=[10,20,30,40,50,60,7,80,90]
+      // console.log(arr.length);
+
+      // 6.toString():-it convert array into the string only seprate by the comma.
+      // const heroes=["spiderman","batman","superman"];
+      // const res=heroes.toString();
+      // console.log(res);
+
+      // 7.at():-this method is used to give charatcter of the index of the element
+      // const arr=[1,2,9,7,15,21];
+      // const arr2=arr.at(4);
+      // console.log(arr2);// o/p15
+
+      // 8.push():- this method is add the array element end of the position
+      // const fruits=["apple","kiwi","mango"];
+      // let add = fruits.push('Banana')
+      // console.log(fruits);
+
+      // 9.pop():- this method is remove  the array element first of the position
+      //  const fruits=["apple","kiwi","mango"];
+      // let add = fruits.pop()
+      // console.log(fruits);
+
+      // 10.unshift():- this method is add  the array element first of the position
+      //  const fruits = ["apple","kiwi","mango"];
+      // let add = fruits.unshift('Banana')
+      // console.log(fruits);
+
+      // 11.shift():- this method is remove  the array element first of the position
+      // const fruits = ["apple","kiwi","mango"];
+      // let add = fruits.shift()
+      // console.log(fruits);
+
+      // 12.concate():-add and merge the two array
+      // const arr1=[10,20,30,40,50];
+      // const arr2=[60,70,80,90,100];
+      // let res=arr1.concat(arr2);
+      // console.log(res); //[10,20,30,40,50,60,70,80,90,100]
+
+      // 13.Spread Oprators
+      // const arr1=[10,20,30,40,50];
+      // const arr2=[60,70,80,90,100];
+      // console.log([...arr1, ...arr2]);
+
+      // 14.flate method() : creates a new array with sub-array elements concatenated to a specified depth
+      // pass the parameter (infinity) to flattern all the depth of the array
+      // const arr = [10,20,30,[40,50,60,],[70,80,[90,100]]];
+      // console.log(arr.flat(Infinity));[10,20,30,40,50,60,70,80,90,100]
+
+      // 15.copyWithin():-
+      // let arr=[10,20,30,40,50];
+      // let arr2=arr.copyWithin(0,2,4)
+      // let arr3=arr.copyWithin(0,1,4)
+      // console.log(arr2);
+
+      // 16.indexof():-this method returns to index of the element
+      // second parameter where to start
+      // let arr=[10,20,30,40,50,60,30];
+      // let arr2=arr.indexOf(30,3)
+      // console.log(arr2);
+
+      // 17.Lastindexof():-this method returns to index of the element last index
+      //  second parameter where to start
+      // let arr=[10,20,30,30,40,50,60,30];
+      // let arr2=arr.lastIndexOf(30)
+      // console.log(arr2);
+
+      // 18.Includes():-this method is check the element in the entire array
+      // let arr=[10,20,'krish','lalan',60,70];
+      // console.log(arr.includes('krish'));
+
+      // 19.find() this method take 3 arguments 1.element 2.index 3.itself array when pass a test it return the first elemets of the array and return only element
+      // const arr=[10,20,30,40,507,12,15,19,508,509];
+      // let ans = arr.find((x,i,arr)=>{
+      //     if(x>40){
+      //      return x;
+      //     }
+      // });
+      // console.log(ans);
+
+      // 20.findIndex() this method is take 3 arguments 1.Element 2.Index 3.Array when pass a test it return the first elemets of the array and return only element
+      // const arr=[10,20,30,40,,10,1,2,3,80,507,12,15,19,508,509];
+      // let ans = arr.findIndex((x,i,arr)=>{
+      //     if(x>40){
+      //      return x;
+      //     }
+      // });
+      // console.log(ans);
+
+      // 21.findLast() ES2023  Method this method take 3 arguments 1.element 2.index 3.itself array when pass a test it return the first elemets of the array and return only element
+      // const arr=[10,20,30,40,507,12,15,19,508,509];
+      // let ans = arr.findLast((x,i,arr)=>{
+      //     if(x>40){
+      //      return x;
+      //     }
+      // });
+      // console.log(ans);
+
+      // 22.FindLastIndex() ES2023  method this method is take 3 arguments 1.Element 2.Index 3.Array when pass a test it return the first elemets of the array and return only element
+      // const arr=[10,20,30,40,,10,1,2,3,80,507,12,15,19,508,509];
+      // let ans = arr.findLastIndex((x,i,arr)=>{
+      //     if(x>40){
+      //      return x;
+      //     }
+      // });
+      // console.log(ans);
+
+      // ======================= Sorting Arrays ==============================================
+
+      // 23.sort() Alphabatical sort
+      // let x = ['e','d','a','t','p'];
+      // console.log(x.sort());
+      // console.log(x);//it change the whole array
+
+      // 24.toSorted() sort the array in alpabatical order and not any changed in orignal array
+      // let x = ['e','d','a','t','p'];
+      // console.log(x.toSorted());
+      // console.log(x);//not any change of the orignal array ES2023 features
+
+      // 25.reverse() :-reverse the array
+      // let x=[10,20,8,9,0,4,4,90,74,52,'ab','ft'];
+      // console.log(x.reverse());
+      // console.log(x);
+
+      // 26.toreverse() reverse the array  and not any changed in orignal array
+      // let x = ['e','d','a','t','p'];
+      // console.log(x.toSorted());
+      // console.log(x);//not any change of the orignal array ES2023 features
+
+      // 27.sorting object this way to sorting the object
+      //       let obj = [
+      //               {third:'mnp'},
+      //               {first:'abc'},
+      //               {second:'lop'},
+      //       ];
+      //    let res = obj.sort((x,y)=>{
+      //       return x - y;
+      //    })
+      //    console.log(res);
+
+      // 28.Numeric Sort() :-it sort the number is asending order pass two parameter and comparing
+
+      // const points = [40, 100, 1, 5, 25, 10];
+      // let res = points.sort((num1,num2)=>{
+      //     return num1-num2;
+      // })
+      // console.log(res);
+      // console.log(points);
+
+      // Numeric sort Desending order
+
+      // const number=[1,50,98,54,63,7,2,5,89,1,20,45];
+      // let total = number.sort((x,y)=>{
+      //             return y - x;
+      // })
+      // console.log(total);
+
+      // Random Sort
+      // let num=[1,3,4,5,798,6,1];
+      // let point= num.sort(()=>{
+      //    return 0.5 - Math.random()
+      // })
+      // console.log(point);
+
+      // Math.min() Sorting
+      // let num=[2,3,4,5,7];
+      // function minvalue (arr) {
+      //     return Math.min.apply(null,arr)
+      // }console.log(minvalue(num));
+
+      // Math.max() Sorting
+      // let num=[2,3,4,5,7,99,45,456];
+      // function maxvalue (arr) {
+      // return Math.max.apply(null,arr)
+      // }console.log(maxvalue(num));
+
+      // ============ NUMBER Methods =================================
+      
+        // 1.tostring():- method returns a number as a string.
+        // const num=123;
+        // console.log(typeof(num));
+        // console.log(typeof(num).toString())
+      
+        //2 toExponential():- method returns a string, with the number rounded and written using exponential notation.
+        // let num=9.2568;
+        // console.log(num.toExponential(3)); 
+
+        // 3.toFixed():- with the number written with a specified number of decimals.
+          // let num=123.456789132123454546;
+          // console.log(num.toFixed(2));
+
+        // 4.toPrecision():- returns a string, with a number written with a specified length:
+          // let num=78.23459;
+          // console.log(num.toPrecision(2));
+          // console.log(num.toPrecision(3));
+          // console.log(num.toPrecision(4));
+          // console.log(num.toPrecision(5));
+      
+        // 5. Valueof():- Returns a number as a number
+        // let num=123;
+        // console.log(num.valueOf());
+        // console.log((123).valueOf());
+        // console.log((100+23).valueOf());
+     </script>
+  </body>
+</html>
