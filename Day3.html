@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- string -->
+    <script>
+        // let x='hello \"k\"rishna';
+        // let str="hello";
+        // let str2="hello 'oscar'"
+        // console.log(x);
+        // console.log(str2);
+
+        // let newstr=new String('hello new string');
+        // console.log(newstr);
+
+        //template literals is used to one variable value add another variable used to template literals.
+        // used Backtick `` sign.
+        // let str='Good Morning';
+        // let str2=`${str},Krishna`
+        // console.log(str2);
+
+
+        //========================= String Methods ======================================================
+
+        // 1.CharAT()
+        // let str='krishna prajapati';
+        // let str2=str.charAt(5);
+        // console.log(str2); // output:-n   
+
+        // 2.slice()  extracting a part of a string -minus value is treted second parameter start 1
+        // let str='krishna prajapati';
+        // let str2=str.slice(3,10)
+        // console.log(str2);//output:-shna pr
+
+        //  3.substring() extracting a part of a string second parameter start in 1
+        //  let str='krishna prajapati';
+        //  let str2=str.substring(2,10)
+        //  console.log(str2);//output:-ishna pra
+
+        // 4.substr The difference is that the second parameter specifies the length of the extracted part.
+        //    let str='krishna prajapati';
+        //    let str2=str.substr(4,10)
+        //   console.log(str2);//output:-hna prajap
+
+        // 5.length()
+        // let str='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        // console.log(str.length);//output 26
+
+        // 6.uppercase()
+        // let str='good morning';
+        // console.log(str.toUpperCase()); output :-"GOOD MORNING"
+
+         // 7.uppercase()
+        // let str='GOOD MORNING';
+        // console.log(str.toLowerCase()); output :-"good morning"
+
+        // 8.concat()
+        // let str ='krishna';
+        // let str1 ='prajapati';
+        // let str3=str.concat(str1);
+        // console.log(str3);//output :-krishnaprajapati
+
+        // 9.trim() it remove white spaces of the string both side
+        // let str = "               KOLI INFOTECH      ";
+        // console.log(str);
+        // console.log(str.trim());
+
+                // 10.trimStart() it remove white spaces of the starting point
+        // let str = "               KOLI INFOTECH";
+        // console.log(str);
+        // console.log(str.trimStart());
+
+        
+        // 11.trimEnd() it remove white spaces of the string ending side
+        // let str = "KOLI INFOTECH                 ";
+        // console.log(str);
+        // console.log(str.trimEnd());
+
+        // 12.split() it convert string into the array formet
+            // let str="ram,laxman,sita"
+            // console.log(str.split(','));
+
+        // 13.repete() this method used to how many time to repete the sentence 
+        // let str='Rahul';
+        // let str2=str.repeat(2)
+        // console.log(str2);
+
+
+        // 14.replace() this method is used to replace the string 
+        // let str='today is saturday';
+        // console.log(str.replace('today','yesterday')); 
+
+        // 15.replaceAll() this method id used to replace all the string 
+        // let str='hello my name is  is  is is is isi is is krishna';
+        // let str2=str.replaceAll('is','He')
+        // console.log(str2);
+
+        // 16.PadStart()
+            // let str='5';
+            // let str2 = str.padStart(4,0)
+            // console.log(str2);
+             
+        //  17.PadEnd()
+            // let str='2';
+            // let str2 = str.padEnd(3,4)
+            // console.log(str2);
+
+        // ================================ Serach strings ===================================== 
+
+        // 18.startsWith() it return Boolean value true or false check occurance of the string 
+        // let str='oscar career point';
+        // let str2=str.startsWith('o');
+        // console.log(str2);
+
+         // 19.EndsWith() it return Boolean value true or false check occurance of the string 
+        //  let str='oscar career point';
+        //  let str2=str.endsWith('point');
+        //  console.log(str2);
+
+        // 20.includes() it return Boolean value it checks the entire string the test is match it returns true    otherwise false
+        // let str='keylogic infotech';
+        // let str2=str.includes('x');
+        // console.log(str2);
+
+        // 21.match() :- The match() method returns an array containing the results of matching a string against a string (or a regular expression).
+
+        // let str='The rain in the Pain';
+        // console.log(str.match('rain'));
+
+        //22.matchAll() :- The matchAll() method returns an iterator containing the results of matching a string against a string (or a regular expression).
+
+        // 23.Indexof():-this method is returns is index position of the first occurance element is not match it returns -1.
+        // let str='hello everyone';
+        // let str2=str.indexOf('o');
+        // console.log(str2);
+
+         // 23.Lastindexof():-this method is returns searches backwards (from the end to the beginning) index    position of the first occurance element is not match it returns -1.
+        // let str="Please locate where 'locate' occurs";
+        // let str2=str.indexOf('locate',15);
+        // console.log(str2);
+
+</script>   
+</body>
+</html>
