@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.rtl.min.css" integrity="sha512-SRg0d/3qeXy0utrb7F4+4jkFHhzdyvqjAd2i9ub0zWrPS80PoRaAtzmbMeVRYtApxoEcE6tcFZaHRY5UbwrTaw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Fetch Method</title>
+</head>
+<body>
+    <button class="btn btn-warning" type="button" onclick="adddata()">Add data</button>
+    <table class="table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>username</th>
+                    <th>email</th>
+                    <th>phone</th>
+                    <th>website</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tbody" class="px-3 py-3 mt-3 text-">
+
+            </tbody>
+        </table>
+    <script>    
+
+            async function callapi(){
+                let result = fetch('https://jsonplaceholder.typicode.com/users').then((res)=>{
+                    return res.json();
+                }).then((data)=>{
+                    let res = data;
+                    document.getElementById('tbody').innerHTML = res.map((x)=>{
+                    return `<tr>
+                        <td>${x.id}</td> 
+                        <td>${x.name}</td>
+                        <td>${x.username}</td>
+                        <td>${x.email}</td>
+                        <td>${x.phone}</td>
+                        <td>${x.website}</td>  
+                        <td>
+                             <button class='btn btn-warning ms-1'>Edit</button>
+                             <button class='btn btn-danger'>Delete</button>
+                       </td> 
+                     </tr>`    
+                    })
+                })
+            }
+            callapi();
+            let obj = {
+                id:101,
+                name:'rahul khatik',
+                username:'maruti Nandan',
+                email:'kmarutinandan123@gmail.com',
+                phone:1234564561,
+                website:'googal.com'
+            }
+
+
+            const adddata = () => {
+                fetch('https://jsonplaceholder.typicode.com/posts',{
+                    method:'POST',
+                    body:JSON.stringify(obj),
+                    headers:{
+                        'Content-type':'application/json',
+                    },
+                }).then((res)=>{
+                    return res.json().then((data)=>{
+                        let res = data;
+                        console.log(res);                       
+                    })
+                })   
+            }
+
+
+                // let result = await fetch('https://jsonplaceholder.typicode.com/users')
+                // result = await result.json();
+                // console.log(result);
+                // document.getElementById('tbody').innerHTML=result.map((x)=>{
+                //  return `<tr>
+                //         <td>${x.id}</td>
+                //         <td>${x.name}</td>
+                //         <td>${x.username}</td>
+                //         <td>${x.email}</td>
+                //         <td>${x.phone}</td>
+                //         <td>${x.website}</td>
+                //         <td>
+                //             <button class='btn btn-warning ms-1'>Edit</button>
+                //             <button class='btn btn-danger'>Delete</button>
+                //         </td>
+                //     </tr>`    
+                // })
+
+                // fetch('https://jsonplaceholder.typicode.com/users').then((res)=>{
+                //     return res.json().then((data)=>{
+                //         console.log(data);
+                //         let tbody = document.getElementById('tbody');
+                //         tbody.map((x)=>{
+                //             `<tr>${x.name}</tr>`
+                //         })
+                        
+                //     })
+                // })
+ 
+                // async function callapi(){
+                //     let result = await fetch('https://jsonplaceholder.typicode.com/users').then((res)=>{
+                //            result = await res.json().then((data)=>{
+                //                console.log(data);
+                //             }).catch((err)=>{
+                //                 console.log(err);
+                //             })
+                //         })
+                //      document.getElementById('tbody').innerHTML = result.map((x) =>{
+                //             `<tr>
+                //                 <td>${x.name}</td>
+                //                 <td>${x.email}</td>
+                //                 <td>${x.username}</td>
+                //                 <td>${x.website}</td>
+                //                 <td>${x.phone}</td>
+                                
+                //                 </tr`    
+                //             }).join("");
+                //         } 
+                //         callapi();
+            
+            // fetch('https://jsonplaceholder.typicode.com/users').then((res)=>{
+            //         return res.json().then((data)=>{
+            //                 data.forEach((val)=>{
+            //                    console.log(val);
+            //                 document.write(`${val.id} -   ${val.name} - ${val.address.city} - ${val.phone} - ${val.username} - ${val.email}  <br>`)    
+            //             })
+            //         }).catch((err)=>{
+            //             console.log(err);
+            //         })
+            // })
+    </script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Json Task</title>
+  </head>
+  <body>
+    <script>
+      let data = {
+        results: [
+          {
+            gender: "female",
+            name: {
+              title: "Miss",
+              first: "Rut",
+              last: "Shramko",
+            },
+            location: {
+              street: {
+                number: 7195,
+                name: "Generala Almazova",
+              },
+              city: "Berdichiv",
+              state: "Lvivska",
+              country: "Ukraine",
+              postcode: 21172,
+              coordinates: {
+                latitude: "76.6157",
+                longitude: "43.9678",
+              },
+              timezone: {
+                offset: "-4:00",
+                description: "Atlantic Time (Canada), Caracas, La Paz",
+              },
+            },
+            email: "rut.shramko@example.com",
+            login: {
+              uuid: "cf14b008-1969-46a6-b954-effafc892908",
+              username: "crazytiger957",
+              password: "flexible",
+              salt: "LyLxMz9K",
+              md5: "7384807f4ba475d474abf44ec3c27a3a",
+              sha1: "83d929d20e8dda40dcc493342b405a2f96d98f8b",
+              sha256:
+                "72a0c008299dd64ad2fc0763914544016e2dbbd8aba8cbca70a30d37cd9b1104",
+            },
+            dob: {
+              date: "2001-03-30T16:58:22.747Z",
+              age: 22,
+            },
+            registered: {
+              date: "2015-05-30T06:07:35.636Z",
+              age: 8,
+            },
+            phone: "(098) N51-6054",
+            cell: "(068) U13-3764",
+            id: {
+              name: "",
+              value: null,
+            },
+            picture: {
+              large: "https://randomuser.me/api/portraits/women/91.jpg",
+              medium: "https://randomuser.me/api/portraits/med/women/91.jpg",
+              thumbnail:
+                "https://randomuser.me/api/portraits/thumb/women/91.jpg",
+            },
+            nat: "UA",
+          },
+        ],
+        info: {
+          seed: "38414ab464040324",
+          results: 1,
+          page: 1,
+          version: "1.4",
+        },
+      };
+     let arr = []; 
+    for(let x in data){
+        arr.push(data[x])
+    }
+    arr.forEach((a)=>{
+        for(let val of a){
+            console.log(val);
+            document.write(val.gender);
+        }
+    })
+   
+
+
+    </script>
+  </body>
+</html>

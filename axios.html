@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.rtl.min.css" integrity="sha512-SRg0d/3qeXy0utrb7F4+4jkFHhzdyvqjAd2i9ub0zWrPS80PoRaAtzmbMeVRYtApxoEcE6tcFZaHRY5UbwrTaw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Axios Method</title>
+</head>
+<body>
+    <button class="btn btn-warning" type="button" onclick="adddata()">Add Data</button>
+    <button class="btn btn-danger" type="button" onclick="DelData()">Delete Data</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>username</th>
+                <th>email</th>
+                <th>phone</th>
+                <th>website</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    <script>
+        axios.get('https://jsonplaceholder.typicode.com/users').then((res)=>{
+            let data = res.data;
+            console.log(res.data);
+            document.getElementById('tbody').innerHTML=data.map((x)=>{
+                return `<tr>
+                        <td>${x.id}</td>
+                        <td>${x.name}</td>
+                        <td>${x.username}</td>
+                        <td>${x.email}</td>
+                        <td>${x.phone}</td>
+                        <td>${x.website}</td>
+                        <td>
+                            <button class='btn btn-danger ms-1'>Edit</button>    
+                            <button class = 'btn btn-warning'>Delete</button>    
+                        </td>
+                    
+                    </tr>`
+            })
+
+        })
+        
+        const adddata = () =>{
+            let obj = {
+                id:11,
+                name:'rahul khatik',
+                username:'maruti Nandan',
+                email:'kmarutinandan123@gmail.com',
+                phone:1234564561,
+                website:'googal.com'
+            }
+            axios.post('https://jsonplaceholder.typicode.com/posts',obj).then((res)=>{
+                console.log(res.data);
+                let obj =res.data;
+                
+            })
+        }
+
+        const DelData = () =>{
+            axios.delete('https://jsonplaceholder.typicode.com/posts/2').then((res)=>{
+                console.log(res.data);
+            })    
+        }   
+
+
+
+
+
+     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
