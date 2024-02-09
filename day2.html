@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div id='container' style="width: 200px;height: 200px;background-color: purple; margin-bottom:10px;">box1</div> -->
+    <button id="demo" type="button" onclick="getdate()">Click me</button> <br><br>
+    <input type="text" id="input" name="fname" onchange="getvalue()" placeholder="input1"> <br><br>
+    
+    <input type ="text" id ="input1" name ="lname" placeholder ="input2">
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquam fugit ipsam sint non possimus voluptatum, eaque aut, delectus aspernatur quibusdam? In ad magnam quos. Quisquam quo iusto tenetur vitae adipisci, fugit perferendis est quae nesciunt mollitia praesentium consequuntur sed neque suscipit culpa eaque libero! Velit sunt fugiat libero perferendis adipisci fugit officiis perspiciatis nisi, voluptatum odio, blanditiis et at. Voluptate perspiciatis pariatur fugit molestiae quis unde harum saepe et asperiores non quod, adipisci consectetur odit accusamus nostrum, expedita alias voluptas corrupti, necessitatibus aut vero ratione. Eos ipsa atque, cum ipsam fugiat omnis enim minus, molestias corporis, cumque eaque et! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptatibus eveniet suscipit hic recusandae magni culpa repellat qui nihil, dolores exercitationem ex, voluptate ad dolorum nesciunt omnis doloremque consectetur aspernatur.</h1>
+    
+    
+    <!-- functions in javascript -->
+    <!-- With functions you can reuse code
+    You can write code that can be used many times. -->
+    <script>
+      // function add(a,b){
+      //     return a*b;
+      // }
+      // let x = add(10,2)
+      // console.log(x);
+
+      // function multi(a){
+      //    for(let i=1;i<=10;i++){
+      //         document.write(`${a}x ${i} = ${a*i}  <br>`)
+      //    }
+      // }multi(5)
+
+      //   function toCelcuis(f){
+      //     return (5/9) * (f-32);
+      //   }
+      //   let value = toCelcuis(77)
+      //   console.log(value);
+
+      // function toCelcuis(f){
+      //     return (5/9) * (f-32);
+      // }
+
+      // let res = "total number of " + toCelcuis(77) + "celcuis ";
+      // console.log(res);
+
+      // function with parameters
+      // function add(x,y){
+      //   return x+y;
+      // }
+      // let res=add(10,20);
+      // console.log(res);
+
+      // function add(x,y){
+      //     console.log(x*y);
+      //   }add(10,20)
+
+      // ============= function scope with tradition function ===============
+      // x = 40; //hoisting
+      // var x;
+      // console.log(x  + ' upper Hoisting');//40
+      // function a(){
+      //   let x=10;
+      //     function b(){
+      //       const x = 30;
+      //       console.log(x + ' inner1');//30
+      //       }b()
+      //       function c(){
+      //         console.log(x  + ' inner2');//10
+      //       }c()
+      //       function d(){
+      //         console.log(x +  ' inner3');//10
+      //       }d()
+      //   }a();
+
+      //arguments used in traditional function
+       
+        // let sum=0;
+        // function add(){
+        //   if(arguments){
+        //     for(let x of arguments){
+        //       sum+=x
+        //     }
+        //     console.log('total sum of Number = ' + sum );
+        //   }
+        // }add(10,20,30,40,50,90,60,120)  
+
+      
+   // ============= function scope with Arrow function ===============
+ 
+      // var x;
+      // x=20;
+      // console.log(x +' hosting'); 
+      // let a = () =>{
+      // let x = 30;
+      //   let b = () =>{
+      //         let x=20;
+      //         console.log(x  + ' inner1'); //20
+      //     };b()
+      //     let c = () =>{
+      //         console.log(x  + ' inner2'); //30
+      //     };c()
+      //     let d = () =>{
+      //       console.log( x   + ' inner3');//30
+      //     };d()
+      //   };a()
+
+      // =================================================
+    
+    //   let a = Number(prompt("Enter the Number:"))
+    //   let multi = () =>
+    //   {
+    //     for( i=1;i<=10;i++){
+    //       document.write(`${a} x ${i} = ${a*i} <br>`)  
+    //     }
+    // };multi();
+
+   // arrow function used with rest operator 
+    //  let sum=0;
+    //   let add = (...args) =>{
+    //       for(let x of args){
+    //         sum+=x;
+    //       }
+    //       console.log('total sum of number = ' + sum);
+    //     };add(10,20,30,40,50,90,45,32,52,65,32)
+
+  
+        // function print(){ 
+        //   if(true){
+        //     let x ='javascript';
+        //     var y='php';
+        //     const z='Node.js'
+        //     console.log(x);
+        //     console.log(y);
+        //     console.log(z);
+        //   }
+        //   console.log(y);      
+        //   console.log(x);      
+        //   console.log(z);      
+        // }print()
+
+        // let a=100; //global scope
+        // function scope(){
+        //   let a=20; //block scope
+        //   console.log('inner scope = ' + a);
+        // }scope()
+        // console.log('outer scope = ' + a);
+
+        // function scope
+       // function ax(){
+        //   let a = 10;
+        // }
+        // console.log(a);
+        // ax();
+
+
+        // function ax(){
+        //   let x=10;
+        //   function ay(){
+        //     console.log(x);
+        //   }ay()
+        //   console.log(x);
+        // }ax()
+
+        // block scope
+        // let x=10;
+        // {
+        //   let x=20;
+        //   console.log(x);
+        // }
+        // console.log(x);
+
+
+        //====================================  IIFE (Immidiatly Invoked Function) 
+
+                // (function hello(){
+                //   console.log('Hello IIFE 1');
+                // })();
+
+                // ((name)=>{
+                //   console.log(`HELLO user ${name}`);
+                // })('krishna');
+
+      
+       
+      //======================  Objects in js ===========================
+
+      // singleton Object
+      
+      // let obj = new Object();
+      // obj.fname='rahul';
+      // obj.lname='khatik';
+      // obj.age=12345;
+      // console.log(obj);
+      // console.log(obj.fname);
+      // console.log(obj.lname);
+      // console.log(obj.age);
+
+      // let person = {
+      //     'firstname':'krishna',
+      //     lastname:'prajapati'
+      // }
+      //  update the obj property value
+      //  person.firstname='kanhaiya';
+
+        //delete the obj property value
+       // delete person.lastname
+      // console.log(person);
+
+      // console.log(person['firstname']);
+
+      // let person = {
+      //    firstname:'krishna',
+      //    lastname:'prajapati',
+      //    age:22 ,
+      //    fullname:function(){
+      //     return  this.firstname + " " + this.lastname + " Age is " +  this.age;
+      //    }
+      // };
+
+      // console.log(person.fullname());
+      // console.log(person.firstname + " " + person.lastname);
+
+
+      // =========================== Nested Objects =================================
+
+    //   let person ={
+    //     fname:'krishna',
+    //     lname:'prajapati',
+    //     age:25,
+    //     address:{
+    //       city:'surat',
+    //       state:'gujarat'
+    //     },
+    //     Contact:{
+    //       email:'kanhaiyaprajapati756@gmail.com',
+    //       mobileno:8849931533,
+    //         job:{
+    //           positon:'React js devloper'
+    //       }
+    //   }
+    // };
+
+    // console.log("My name is " + " "+person.fname+' '+person.lname + ',' + " My age is" + ' ' + person.age  + ' my email id is' + ' ' + person.Contact.email +',' + ' My mobile Number is ' + person.Contact.mobileno + ' My job Profile is ' + person.Contact.job.positon +' My address is ' + person.address.city  + ' My state is ' + person.address.state +'.');
+
+  // Object Methods
+
+      // let obj ={
+      //   fname:'krishna',
+      //   lname:'prajapati',
+      //   greeting (){
+      //     console.log('hello krishna');
+      //   }
+      // }
+      // console.log(obj.greeting());
+
+    // Object method using this keyword
+      
+      //   let obj1 = {
+      //   fname:'samir',
+      //   lname:'khan',
+      //   fullname:function(){
+      //   return this.fname + ' ' + this.lname; 
+      //   }
+      // }
+      // console.log(obj1.fullname());
+          
+
+      // let obj1 ={id1:1,fname:'krishna'}
+      // let obj2 ={id2:2,lname:'rahul'}
+      // console.log({...obj1,...obj2});
+
+
+    //========================== Object Constructor ==============
+    
+     //  function student(fname,lname,age,city,mobile){
+     //  this.fname=fname;
+    //   this.lname=lname;
+    //   this.age=age;
+   //    this.city=city;
+   //    this.mobile=mobile;
+   //  }
+
+  //   let student1 = new student('krishna','prajapati',22,'surat',8849931533);
+  //   let student2 = new student('samir','khan',23,'surat',123456789);
+  //   console.log(student1);
+  //   console.log(student2);
+  //  when you add the property outside the obj that time used in prototype
+
+  //Events in javascript
+  // click event
+  
+    let button =document.getElementById('demo');
+    button.addEventListener('click',()=>{
+        document.body.style.cssText='background-color:red'  
+    })
+
+    // mouse Events
+
+    button.addEventListener('mouseenter',()=>{
+        document.body.style.cssText='background-color:yellow'  
+    })
+
+    button.addEventListener('mouseout',()=>{
+        document.body.style.cssText='background-color:orange'  
+    })
+    let div=document.getElementById('container');
+    div.addEventListener('click',()=>{
+      div.style.cssText='background-color:olive;color:white;width:200px;height:100px;border-radius:100px;text-align:center;text-transform:uppercase;';    
+    })
+   // input events for the form 
+
+    let inputbox = document.querySelector('input');
+    inputbox.addEventListener('focus',()=>{
+      inputbox.style.cssText='background-color:red'; 
+    })
+   
+    inputbox = document.querySelector('input');
+    inputbox.addEventListener('blur',()=>{
+      inputbox.style.cssText='background-color:orange'; 
+    })
+    
+    let getvalue = (e) =>{
+      let inputbox = document.getElementById('input').value;
+      console.log(inputbox);
+    }
+    // keys event
+
+    let inputbox2 = document.getElementById('input1');
+    let x = inputbox2.addEventListener('keydown',(event)=>{
+    console.log(event.key + ' keydown '); 
+    })
+
+     inputbox2 = document.getElementById('input1');
+     x = inputbox2.addEventListener('keypress',(event)=>{
+    console.log(event.key + ' keypress '); 
+    })
+     inputbox2 = document.getElementById('input1');
+     x = inputbox2.addEventListener('keyup',(event)=>{
+    console.log(event.key + ' keyup '); 
+    })
+
+
+    // Scroll events
+
+      window.addEventListener('scroll',()=>{
+        console.log('scrolling');
+      })
+    
+      window.addEventListener('scroll',()=>{
+        if(window.pageYOffset>150){
+          document.body.style.cssText='background-color:grey;color:white;';
+        }
+        else{
+          document.body.style.cssText='background-color:yellow;'
+        }
+      })
+
+     // let getdate = () =>{
+      //       document.getElementById('demo').innerHTML=new Date();
+      // }
+
+      // let getdate = () =>{
+      //  document.getElementById('demo').innerText=new Date();
+     // document.body.innerHTML=new Date();
+    // }
+
+
+
+    </script>
+  </body>
+</html>
