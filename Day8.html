@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8</title>
+</head>
+<body>
+    <script>
+
+        //Maps Method in JavaScript it is collection of unique value no allowed to hold duplicate value.
+        // Create A New Map
+    //     let arr = new Map();
+    //     // Set A Map With Set Method
+    //     arr.set(10,'first')
+    //     arr.set(20,'second')
+    //     arr.set(30,'third')
+    //     arr.set(40,'fourth')
+    //     arr.set(50,'five')
+    //     //the Set() method can also be used to change existing Map values.
+    //     arr.set(20,'six')
+        
+    //     // The get() method gets the value of a key in a Map:
+    //     arr.get(50)
+    //     console.log(arr); 
+
+    //     // The delete() method removes a Map element:
+    //     arr.delete(20);
+    //     console.log(arr);
+    //     arr.set(20,'Second');
+    //     console.log(arr);
+
+    //     // The has() method returns true if a key exists in a Map:
+    //     let x = arr.has(40);
+    //     console.log(x);
+
+    //     // The entries() method returns an iterator object with the [key, values] in a Map.
+    //    for(let  value of arr.entries()){
+    //     console.log(value);
+    //    }
+
+    //   // The forEach() method calls a function for each key/value pair in a Map: 
+    //   arr.forEach((get_val,index)=>{
+    //         console.log(index + ' ' + ' = ' +  get_val);
+    //   })  
+    // //   the Size Method is used to calculate the size of the array. 
+    //   console.log(arr.size);
+
+
+
+    //   let maps = new Map();
+    //   maps.set(
+    //     {fname:'krishna'},
+    //     {lname:'prajapati'},
+    //     ['age',20],
+    //   )
+
+    //   console.log(maps);
+
+      // Type of oprator is return data type
+      //  console.log(typeof 'hello');
+      //  console.log(typeof 123);
+      //  console.log(typeof true);
+      //  console.log(typeof null);
+      //  console.log(typeof undefined);
+      //  console.log(typeof {});
+      //  console.log(typeof []);
+      //  console.log(typeof ' ');
+
+
+    //   String to Number
+
+    //   let string ='hello oscar';
+    //   console.log(typeof string);
+    //   let num = Number(string)
+    //   console.log(typeof num);
+    
+    //Numbers to Strings
+
+    // let num=12346;
+    // console.log(typeof num);
+    // let str='one,two,three';
+    // console.log(String(num));
+    // console.log(typeof str);
+
+
+    // /Converting Dates to Numbers
+    // let date = new Date();
+    // console.log(typeof date);
+    // let num = (Number(date));
+    // console.log(typeof num);
+
+
+    //Converting Numbers to Dates
+
+    // let number=1456;
+    // console.log(typeof(number));
+    // let date = new Date(number);
+    // console.log(typeof(date));
+
+    // Converting Booleans to Numbers
+
+    // let x=true;
+    // console.log(typeof(x));
+    // let bool = Number(x);
+    // console.log(typeof(bool));
+
+    // Converting Numbers to Booleans
+
+        // let num=12345;
+        // console.log(typeof(num));
+        // let bool =Boolean(num);
+        // console.log(typeof(bool));
+
+    //Scope there are 3 types of scope 1.block scope 2.function scope.3.global scope
+    // Block Scope
+    // {
+    //     let x=20;
+    //     console.log(x);
+    // }
+    // console.log(x);
+    
+    // function scope
+    // function print(){
+    //     function a(){
+    //         let x=10;
+    //         console.log('print a');
+    //         console.log(x);//10
+    //         console.log(x = 20);//10
+    //     }a();
+    //     function b(){
+    //         console.log('print b');
+    //         console.log(x);//10
+    //     }b();
+    //     function c(){
+    //         console.log('print c');
+    //         console.log(x);
+    //     }
+    //     c();
+    //     console.log(x);//10
+    // }print()
+
+        
+    // Regular Expression
+
+        // let pattern = /[a-z]/gi;
+        // let pass = "KRISHNA is very very good person";
+        // console.log(pattern.exec(pass));
+
+        // let pattern = /[A-Z]/gi;
+        // let pass ='AHello Everyone nice To meet you!!';
+        // console.log(pattern.test(pass)); // test method is return boolean character is match it returns true.
+        
+        // let pattern = /[A-Z][0-9]/gi;
+        // let pass = "A12345";
+        // console.log(pattern.test(pass));//true
+        
+        
+        // let pattern = "Javascript is a programming Language.javascript is a scripting Language.";
+        // let result = pattern.match(/JavaScript/ig);
+        // console.log(result);
+
+
+        //search with regular expression
+        // let pattern = "Welcome to MYWorld";
+        // let pass = pattern.search(/MyWorld/i)
+        // console.log(pass);//output 11
+        
+        // Replace with a Regular Expression
+
+        // let string = "Welcome To the python";
+        // let res = string.replace(/python/ig,'javascript');
+        // console.log(res);
+        
+        
+        //Javascript regex password pattern
+        // let pattern = /^(?=.*[a-z]) (?=.*[A-Z]) (?=.*[0-9]) (?=.*[!@#\$%\^&\*]) (?=.{8,})/g;
+        // let password = "Krishna@#123";
+        // let t = pattern.test(password);
+        // if(t != true){
+        //     console.log('Your Password is Strong');
+        // }
+        // else{
+        //     console.log('your password is weak');
+        // }
+     
+    
+        // practice regx 
+
+        //  let pattern = /hello/gi;
+        //  let pass =" klklklk  Hello i am krishna";
+        //  console.log(pattern.exec(pass));        
+
+        // let pattern = /javascript/gi;
+        // let pass="hello Javascript is the best programming language";
+        // console.log(pattern.test(pass));
+
+        // string methods and regular Expression    
+        
+        //search method :-
+        // let pattern = "hello i am Very hunger i am Very smart i am vert intillegent";
+        // let pass = pattern.search(/very/i);
+        // console.log(pass);    
+
+        // Replace method
+
+        // let pattern ='hello i am php devloper and i am teach php language';
+        // let pass= pattern.replace(/php/gi,'javascript');
+        // console.log(pass);
+        
+        // let pattern ='hello i am cdhruv chaudhary';
+        // let pass =pattern.match(/am/i);
+        // console.log(pass); //this method is returns a index number
+          
+        // Try,catch ,Throw ,Finally.
+        //    let x=10;
+        //    let y=30;
+        //    z=x*y;
+        //    try {
+        //        p;
+        //     } catch (error) {
+        //     console.log(error.message);
+        //    }
+        //    finally{
+        //     console.log('finnaly done the code');
+        //    }
+        //    console.log(z); 
+
+          // Hoisting 
+
+        
+            call()
+            function call(){
+                console.log('hello guru');
+            }
+
+
+            // x = 7;
+            // console.log(x);
+            // x=7;
+            
+            
+        //     var x;
+        //     x=undefined; //undefined
+        //     console.log(x);
+
+        //    //var a;
+        //     a=10;
+        //     console.log(a);
+
+
+        //   var x;
+        //   x=undefined;
+        //   console.log(x);
+        //   x=10;
+
+        
+    
+        
+
+
+
+
+  
+
+    
+         
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    </script>
+</body>
+</html>
