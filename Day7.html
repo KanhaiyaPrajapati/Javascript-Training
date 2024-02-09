@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 7</title>
+  </head>
+  <body>
+    <script>
+      // Break And Continue in Javascript
+      // let i;
+      // for(i=0;i<=10;i++){
+      //     if(i == 5){
+      //         break;
+      //     }
+      //     console.log('oscar' + i);
+      // }
+
+      // for(let i=1;i<=10;i++){
+      //     if(i==5){
+      //         continue;
+      //     }
+      //     console.log('oscar' + i);
+      // }
+
+      // let arr = new Map([
+      //     ['apple',500],
+      //     ['banana',300],
+      //     ['oranges',200],
+      // ]);
+      // for(let x of arr){
+      //     console.log(x);
+      // }
+
+      // when you looping in string that time used for of loop
+      // let str='hello javascript';
+      // for(let x of str){
+      //     console.log(x);
+      // }
+
+      //============================== Sets Method in javascript ==========================================
+
+      // Sets :-Set MEthod is collection of the unique value,
+      // Set Method is not allow to duplicate value.
+
+      // let data = new Set([1,2,5,3,5,8,1,1,1,"hello","oscar"]);
+      // console.log(data); //Remove automatically duplicate value
+
+      // add():-  you want to add the value in sets
+      // data.add('krishna');
+
+      // delete():- you want to Delete the value in sets
+      // data.delete('hello');
+
+      // has():- Returns true if a value exists in the Sets return boolean true or false
+      // let has = data.has("oscar");
+      // console.log(has);
+
+      //  size():- Returns the number of elements in a Set
+      //  let size = data.size();
+      //  console.log(size);
+
+      //  Set.values():- returns a Set Iterator:
+      // let val = data.values();
+      // console.log(val);
+
+      // forEach is sets
+      // data.forEach((x)=>{
+      //     console.log(x);
+      // })
+
+      // Convert array to set
+      // let arr=[10,20,30,40,50];
+      // arr = new Set(arr);
+      // console.log(arr);  
+
+      // Convert Set to Array
+      // let data = new Set ([10,20,30,40,50]);
+      // data = [...data];
+      // console.log(data);
+
+
+
+
+      // let arr1=[];
+      // let arr=[1,20,5,36,8,97,2];
+      // let res = arr.forEach((x)=>{
+      //     let p = x+100;
+      //     arr1.push(p)
+
+      // })
+      // console.log(arr1);
+
+      // let arr=[1,20,5,36,8,97,2];
+      // let res = arr.map((x)=>x+100)
+      // console.log(res);
+
+      // let arr1=[];
+      // let arr =[10,20,30,40,50];
+      // let res = arr.forEach((x)=>{
+      //     //   let p=x+100;
+      //       arr1.push(x+100)
+      // })
+      //  console.log(arr1);
+
+      // let arr = [
+      //     {
+      //         fname:'krishna',
+      //         lname:'prajapati'
+      //     },
+      //     {
+      //         fname:'prem',
+      //         lname:'prajapati'
+      //     },
+      //     {
+      //         fname:'rahul',
+      //         lname:'prajapati'
+      //     },
+      //     {
+      //         fname:'krishna',
+      //         lname:'prajapati'
+      //     },
+      //     {
+      //         fname:'geeta',
+      //         lname:'prajapati'
+      //     },
+      // ];
+      // // let res = arr.filter((x)=>{
+      // //     return x.fname === 'krishna';
+      // // })
+      // // console.log(res);
+
+      // let arr1=[];
+      // let res = arr.forEach((x)=>{
+      //     console.log(x.fname === 'krishna');
+
+      //     console.log(x);
+      // })
+
+      // let arr1=[];
+      // let arr2=[];
+      // for(let x in arr){
+      //     arr1.push(arr[x])
+      // }
+      // console.log(arr1);
+      // arr1.filter((get_val)=>{
+      //     if(typeof(get_val)=='string' && get_val.fname=='krishna'){
+      //         // console.log(get_val);
+      //         arr2.push(get_val)
+      //     }
+      // })
+      // console.log(arr2);
+
+      //   let myArr = [
+      //     {
+      //       studenName: "jack",
+      //       studenClass: 6,
+      //       studenSection: "a",
+      //     },
+      //     {
+      //       studenName: "tom",
+      //       studenClass: 6,
+      //       studenSection: "a",
+      //     },
+      //   ];
+
+      // let res =  myArr.forEach((item)=>{
+      // })
+      // console.log(myArr[0].studenSection);
+      // console.log(res);
+
+      // for(let x of myArr){
+      //     if(x.studenName == 'jack'){
+      //         console.log(x);
+      //     }
+      // }
+
+      // myArr.forEach((x)=>{
+      //     if(x.studenName=='jack'){
+      //         console.log(x);
+      //     }
+      // })
+
+      // let totalgoals=0;
+      // let arda = {
+      // age:17,
+      //  stats:[
+      //     {
+      //         competitaion:'super league',
+      //         goals:2
+      //     },
+      //     {
+      //         competitaion:'Fifa',
+      //         goals:3
+      //     },
+      //  ]
+      // };
+
+      // for(let x of arda.stats){
+      //    totalgoals += x.goals
+      // }
+      // console.log('total goals is = ' +  totalgoals);
+
+      // Map MEthod
+      //    let arr = new Map([
+      //     [1,2,3,4]
+      // ]);
+      //    console.log(arr[0]);
+
+      // let arr1=[]
+      // let arr=[2,3,4,5,6];
+      // for(let i=0;i<arr.length;i++){
+      //        arr1[i]= arr[i]*2
+      // }
+      // console.log(arr1);
+
+      // setInterval(()=>{
+      //     console.log('hello krishna');
+      // },3000)
+
+      // Callback function=========================
+
+      // function sayhello(){
+      //     console.log('hello krishna');
+      // }
+      // function sayhi(){
+      //     console.log('hii krishna');
+      // }
+      // function add(a,b,callback){
+      //     console.log(a+b);
+      //     callback();
+      // }add(10,20,sayhello);
+      //  add(50,50,sayhi);
+
+      // let printname = () =>{
+      //     console.log('hello friends');
+      // }
+      // let printname1 = () =>{
+      //     console.log('hello dadu');
+      // }
+      // let printname2 = () =>{
+      //     console.log('hello bheem');
+      // }
+      // let printname3 = () =>{
+      //     console.log('hello shyam');
+      // }
+      // let printname4 = () =>{
+      //     console.log('hello bharat');
+      // }
+      // let add = (a,b,callback) =>{
+      //     console.log(a+b);
+      //     callback();
+      // };add(100,20,printname)
+      //     add(100,20,printname1)
+      //     add(100,20,printname2)
+      //     add(100,20,printname3)
+      //     add(100,20,printname4)
+
+      // Type of oprator is return data type
+
+      //  console.log(typeof 'hello');
+      //  console.log(typeof 123);
+      //  console.log(typeof true);
+      //  console.log(typeof null);
+      //  console.log(typeof undefined);
+      //  console.log(typeof {});
+      //  console.log(typeof []);
+      //  console.log(typeof ' ');
+
+      //   const student = {
+      //     name: "John",
+      //     age: 20,
+      //     marks: {
+      //       science: 70,
+      //       math: 75,
+      //     },
+      //   };
+      // console.log(student);
+      // // console.log(student.name='krishna');
+      // // console.log(delete student.marks);
+      // for(let x in student){
+      //     // console.log(student.name=='john');
+      //     if(x.name === 'John'){
+      //         console.log(x);
+      //     }
+      //     console.log(student[x]);
+      // }
+      // console.log(student.marks.science);
+    
+    // object 1
+    //   const person = {
+    //     name: "Jack",
+    //     age: 26,
+    //   };
+
+    //   // object 2
+    //   const student = {
+    //     name:'jill',
+    //     gender: "male",
+    //   };
+
+    // //   let mergeobj = ({...person, ...student})
+    // let mergeobj = Object.assign(person,student);
+    //   console.log(mergeobj);
+
+    //   let haskey = 'name' in person
+    //   console.log(haskey);
+
+    </script>
+  </body>
+</html>
